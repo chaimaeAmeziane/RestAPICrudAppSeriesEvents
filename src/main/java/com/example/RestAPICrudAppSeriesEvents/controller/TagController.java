@@ -19,7 +19,6 @@ import java.util.List;
 @RequestMapping("/api/users/{userId}/series/{serieId}/events")
 public class TagController {
     @Autowired
-    private TagRepository tagRepository;
     private TagService tagService;
 
     @Autowired
