@@ -20,7 +20,7 @@ public class SerieService {
     {
         return serieRepository.findByUserIdAndSerieId(id,uid);
     }
-    public void deleteUserById(Long id)
+    public void deleteSerieById(Long id)
     {
         serieRepository.deleteById(id);
     }

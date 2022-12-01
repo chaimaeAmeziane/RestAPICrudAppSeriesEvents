@@ -51,7 +51,7 @@ public class SerieController {
         }
         User user = userRepository.findById(userId).orElseThrow();
         Serie serie  = serieService.findByUserIdAndSerieId(serieId,userId);
-        serieService.deleteUserById(serie.getId());
+        serieService.deleteSerieById(serie.getId());
         return "Serie " + serieId+ " of user "+user.getFirstname()+" "+ user.getLastname()+ "is successfully deleted ! ";
     }
     @PutMapping("/users/{userId}/series/{serieId}")

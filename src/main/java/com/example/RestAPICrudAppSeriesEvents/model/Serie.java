@@ -29,6 +29,17 @@ public class Serie {
     @JsonManagedReference
     private List<Event> events;
 
+    public Serie()
+    {
+
+    }
+    public Serie(String titre,String description,User user)
+    {
+        this.title=titre;
+        this.description=description;
+        this.user=user;
+    }
+
     public Long getId() {
         return id;
     }

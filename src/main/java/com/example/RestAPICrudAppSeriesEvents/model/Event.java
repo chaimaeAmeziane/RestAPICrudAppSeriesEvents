@@ -7,6 +7,7 @@ import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 
 import java.util.List;
+import java.util.function.IntPredicate;
 
 @Entity
 @Table(name = "events")
@@ -27,6 +28,16 @@ public class Event {
     @JsonManagedReference
     private List<Tag> tags;
 
+    public Event(){}
+
+    public Event(String date,int value,String commentaire,Serie serie)
+    {
+        this.date=date;
+        this.value=value;
+        this.commentaire=commentaire;
+        this.serie=serie;
+
+    }
     public int getId() {
         return id;
     }
